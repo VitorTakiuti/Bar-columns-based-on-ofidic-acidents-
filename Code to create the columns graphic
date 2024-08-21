@@ -1,0 +1,53 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Loading the spreadsheet "CobrasGeral"
+file_path = '/content/Casos e óbitos.xlsx'
+df_cobras = pd.read_excel(file_path, sheet_name='CobraObitos')
+
+# Defining species and year
+species = df_cobras['Espécie'].unique()
+years = [2020, 2021, 2022]
+
+# Bar Width
+bar_width = 0.25
+index = np.arange(len(species))
+
+# Creating the visual 'image' of the graphic
+fig, ax = plt.subplots(figsize=(12, 8))
+
+# Color of the Bars
+colors = {
+    2020: ['#ffcccc', '#ff9999', '#ff6666'],
+    2021: ['#ccccff', '#9999ff', '#6666ff'],
+    2022: ['#ccffcc', '#99ff99', '#66ff66']
+}
+
+for i, year in enumerate(years):
+    # Posição das barras
+    bar_positions = index + i * bar_width
+
+    # Filter data
+    values = df_cobras[year]
+
+    # Create the Bars
+    bars = ax.bar(bar_positions, values, bar_width, color=colors[year], label=f'{year}')
+
+    # Adding numbers to the bars
+    for bar in bars:
+        yval = bar.get_height()
+        ax.text(bar.get_x() + bar.get_width()/2, yval, int(yval), ha='center', va='bottom', fontsize=11)
+
+# Setitng the labels
+ax.set_xlabel('Espécies', fontsize=14)
+ax.set_ylabel('Número de Óbitos', fontsize=14)
+ax.set_xticks(index + bar_width)
+ax.set_xticklabels(species, rotation=45, ha='right')
+
+# Subtitle
+ax.legend(title="Ano")
+
+# Plot title and the Graphic
+plt.title('Número de Óbitos por Espécie (2020-2022)')
+plt.show()
