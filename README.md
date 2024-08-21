@@ -1,4 +1,6 @@
 # Bar-columns-based-on-ofidic-acidents-
+Authors: Diego Henrique dos Santos, Leticia Bernardino Toffoli, Vitor Ouchi Takiuti 
+
 Using Python to create columns graphics that show up ofidic acidents for three years in Brazil using public health data from the Government 
 
 SpreadSheet of the accidents caused by venomous snake species Called 'CobrasGeral'
