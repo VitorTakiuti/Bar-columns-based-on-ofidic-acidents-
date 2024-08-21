@@ -51,3 +51,4 @@ ax.legend(title="Ano")
 # Plot title and the Graphic
 plt.title('Número de Óbitos por Espécie (2020-2022)')
 plt.show()
+
