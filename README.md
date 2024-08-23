@@ -9,7 +9,8 @@ SpreadSheet of the accidents caused by venomous snake species Called 'CobrasGera
 
 Using the data above, the graphic below was created to ilustrate the number of accidents per year and per snake specie
 Ofidic acidents 
-![image](https://github.com/user-attachments/assets/28e275cb-59aa-4dbd-a846-c622233d1088)
+![image](https://github.com/user-attachments/assets/bd4ae258-9357-43cc-b575-db011c3278b5)
+
 
 
 SpreadSheet of the number of deaths caused by venomous snake species Called 'CobrasObitos'
@@ -18,4 +19,5 @@ SpreadSheet of the number of deaths caused by venomous snake species Called 'Cob
 
 Using the data above, the graphic below was created to ilustrate the number of deaths per year and per snake specie
 Deaths caused by snakes 
-![image](https://github.com/user-attachments/assets/18d0f7e8-03dd-4fa0-877f-321e43a36559)
+![image](https://github.com/user-attachments/assets/8cce452b-24c4-41d4-8027-1a0d1dd7eb54)
+
