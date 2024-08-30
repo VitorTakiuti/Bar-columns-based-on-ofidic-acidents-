@@ -17,11 +17,11 @@ index = np.arange(len(species))
 # Criar o gráfico
 fig, ax = plt.subplots(figsize=(12, 8))
 
-# Definir cores sólidas para cada ano
+# Definir as cores para cada ano
 colors = {
-    2020: '#ff6666',  # Vermelho sólido
-    2021: '#6666ff',  # Azul sólido
-    2022: '#66ff66'   # Verde sólido
+    2020: '#ADD8E6',  # Azul claro
+    2021: '#0000FF',  # Azul
+    2022: '#00008B'   # Azul escuro
 }
 
 for i, year in enumerate(years):
@@ -37,7 +37,7 @@ for i, year in enumerate(years):
     # Adicionar os valores no topo de cada barra
     for bar in bars:
         yval = bar.get_height()
-        ax.text(bar.get_x() + bar.get_width()/2, yval, int(yval), ha='center', va='bottom', fontsize=10)
+        ax.text(bar.get_x() + bar.get_width()/2, yval, int(yval), ha='center', va='bottom', fontsize=12)
 
 # Configurar os eixos
 ax.set_xlabel('Espécies', fontsize=14)
@@ -45,65 +45,10 @@ ax.set_ylabel('Número de Casos', fontsize=14)
 ax.set_xticks(index + bar_width)
 ax.set_xticklabels(species, rotation=45, ha='right')
 
-# Adicionar a legenda
-ax.legend(title="Ano")
+# Adicionar a legenda com tamanho maior
+ax.legend(title="Ano", fontsize=15, title_fontsize=17)
 
 # Ajustar o título e mostrar o gráfico
-plt.title('Número de Acidentes Ofídicos por Espécie (2020-2022)')
-plt.show()
-
-
-import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Carregar os dados da planilha "CobrasGeral"
-file_path = '/content/Casos e óbitos.xlsx'
-df_cobras = pd.read_excel(file_path, sheet_name='CobraObitos')
-
-# Definir as espécies e os anos
-species = df_cobras['Espécie'].unique()
-years = [2020, 2021, 2022]
-
-# Definir a largura das barras e o número de espécies
-bar_width = 0.25
-index = np.arange(len(species))
-
-# Criar o gráfico
-fig, ax = plt.subplots(figsize=(12, 8))
-
-# Definir cores sólidas para cada ano
-colors = {
-    2020: '#ff6666',  # Vermelho sólido
-    2021: '#6666ff',  # Azul sólido
-    2022: '#66ff66'   # Verde sólido
-}
-
-for i, year in enumerate(years):
-    # Posição das barras
-    bar_positions = index + i * bar_width
-
-    # Filtrar os dados para o ano específico
-    values = df_cobras[year]
-
-    # Criar as barras
-    bars = ax.bar(bar_positions, values, bar_width, color=colors[year], label=f'{year}')
-
-    # Adicionar os valores no topo de cada barra
-    for bar in bars:
-        yval = bar.get_height()
-        ax.text(bar.get_x() + bar.get_width()/2, yval, int(yval), ha='center', va='bottom', fontsize=10)
-
-# Configurar os eixos
-ax.set_xlabel('Espécies', fontsize=14)
-ax.set_ylabel('Número de Casos', fontsize=14)
-ax.set_xticks(index + bar_width)
-ax.set_xticklabels(species, rotation=45, ha='right')
-
-# Adicionar a legenda
-ax.legend(title="Ano")
-
-# Ajustar o título e mostrar o gráfico
-plt.title('Número de Acidentes Ofídicos por Espécie (2020-2022)')
+plt.title('Número de Acidentes Ofídicos por Espécie (2020-2022)', fontsize=16)
 plt.show()
 
