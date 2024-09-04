@@ -14,7 +14,7 @@ Ofidic acidents
 
 
 SpreadSheet of the number of deaths caused by venomous snake species Called 'CobrasObitos'
-![image](https://github.com/user-attachments/assets/7972fe6b-8565-487c-9f1a-e918334a7f6b)
+![image](https://github.com/user-attachments/assets/e3c3a80e-e32a-4842-895b-0da250cc4127)
 
 
 
